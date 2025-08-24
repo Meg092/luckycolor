@@ -23,7 +23,7 @@ class ColorsSelect extends GetView<LuckyColorsInitLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.gmcdph.value)),
+              url: WebUri.uri(Uri.parse(controller.mvdixec.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

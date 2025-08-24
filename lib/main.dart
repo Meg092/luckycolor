@@ -4,6 +4,9 @@ import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lucky_colors/pages/lucky_colors_home/lucky_colors_home_binding.dart';
 import 'package:lucky_colors/pages/lucky_colors_home/lucky_colors_home_view.dart';
+import 'package:lucky_colors/pages/lucky_colors_init/lucky_colors_init_binding.dart';
+import 'package:lucky_colors/pages/lucky_colors_init/lucky_colors_init_view.dart';
+import 'package:lucky_colors/pages/lucky_colors_prosperity/colors_select.dart';
 import 'package:lucky_colors/pages/lucky_colors_prosperity/lucky_colors_prosperity_binding.dart';
 import 'package:lucky_colors/pages/lucky_colors_prosperity/lucky_colors_prosperity_view.dart';
 import 'package:lucky_colors/pages/lucky_colors_setting/lucky_colors_setting_binding.dart';
@@ -41,7 +44,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           getPages: Amin,
-          initialRoute: '/luckyColorsHome',
+          initialRoute: '/',
           theme: ThemeData(
             useMaterial3: true,
             primaryColor: primaryColor,
@@ -72,6 +75,11 @@ class MyApp extends StatelessWidget {
 }
 List<GetPage<dynamic>> Amin = [
   GetPage(
+    name: '/',
+    page: () => LuckyColorsInitView(),
+    binding: LuckyColorsInitBinding(),
+  ),
+  GetPage(
     name: '/luckyColorsHome',
     page: () => LuckyColorsHomePage(),
     binding: LuckyColorsHomeBinding(),
@@ -80,6 +88,10 @@ List<GetPage<dynamic>> Amin = [
     name: '/luckyColorsTypeOfLucky',
     page: () => LuckyColorsTypeOfLuckyPage(),
     binding: LuckyColorsTypeOfLuckyBinding(),
+  ),
+  GetPage(
+    name: '/select_color',
+    page: () => ColorsSelect(),
   ),
   GetPage(
     name: '/luckyColorsProsperity',

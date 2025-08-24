@@ -10,8 +10,8 @@ class LuckyColorsInitView extends GetView<LuckyColorsInitLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.huels.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.haag.value
+              ? const CircularProgressIndicator(color: Colors.blue)
               : buildError(),
         ),
       ),
@@ -25,7 +25,7 @@ class LuckyColorsInitView extends GetView<LuckyColorsInitLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.jrvsn();
+              controller.vkmype();
             },
             icon: const Icon(
               Icons.restart_alt,
